@@ -10,12 +10,12 @@ public class Board {
 	private ArrayList<BoardRow> board = new ArrayList<BoardRow>();
 
 	public void initialize() {
-		board.add(new BoardRow());
+		board.add(new BoardRow("back", "white"));
 		board.add(new BoardRow("front", "white"));
 		for (int i = 0; i < 4; i++)
 			board.add(new BoardRow());
 		board.add(new BoardRow("front", "black"));
-		board.add(new BoardRow());
+		board.add(new BoardRow("back", "black"));
 	}
 
 	public int pieceCount() {

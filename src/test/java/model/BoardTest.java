@@ -17,11 +17,11 @@ public class BoardTest {
 	public void boardCreateTest() throws Exception {
 		board.initialize();
 
-		assertEquals(16, board.pieceCount());
+		assertEquals(20, board.pieceCount());
 
 		String blankRank = appendNewLine("........");
-		assertEquals(appendNewLine("........") + appendNewLine("pppppppp") + blankRank + blankRank + blankRank + blankRank
-				+ appendNewLine("PPPPPPPP") + blankRank, board.showBoard());
+		assertEquals(appendNewLine(".n....n.") + appendNewLine("pppppppp") + blankRank + blankRank + blankRank
+				+ blankRank + appendNewLine("PPPPPPPP") + appendNewLine(".N....N."), board.showBoard());
 	}
 
 	private String appendNewLine(String value) {

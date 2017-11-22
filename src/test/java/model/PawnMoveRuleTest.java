@@ -18,14 +18,14 @@ public class PawnMoveRuleTest {
 	public void pawnMoveTest() {
 		board.move("B2", "B4");
 		assertEquals(
-		appendNewLine("........") + 
+		appendNewLine(".n....n.") + 
 		appendNewLine("p.pppppp") + 
 		appendNewLine("........") + 
 		appendNewLine(".p......") + 
 		appendNewLine("........") + 
 		appendNewLine("........") + 
 		appendNewLine("PPPPPPPP") + 
-		appendNewLine("........"), board.showBoard());
+		appendNewLine(".N....N."), board.showBoard());
 	}
 	
 //	@Test(expected = InvalidMoveException.class)

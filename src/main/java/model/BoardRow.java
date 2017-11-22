@@ -63,7 +63,8 @@ public class BoardRow {
 		for (int i = 0; i < 8; i++) {
 			inputRow.add(null);
 		}
-		inputRow.set(7, new Pawn(color));
+		inputRow.set(1, new Knight(color));
+		inputRow.set(6, new Knight(color));
 		return inputRow;
 	}
 }

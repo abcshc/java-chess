@@ -19,39 +19,39 @@ public class BoardMoveTest {
 	@Test
 	public void boardCreateTest() {
 		assertEquals(
-				appendNewLine("........") + 
+				appendNewLine(".n....n.") + 
 				appendNewLine("pppppppp") + 
 				appendNewLine("........") + 
 				appendNewLine("........") + 
 				appendNewLine("........") + 
 				appendNewLine("........") + 
 				appendNewLine("PPPPPPPP") + 
-				appendNewLine("........"), board.showBoard());
+				appendNewLine(".N....N."), board.showBoard());
 	}
 
 	@Test
 	public void boardMoveTest1() {
 		board.move("B2", "B3");
 		assertEquals(
-				appendNewLine("........") + 
+				appendNewLine(".n....n.") + 
 				appendNewLine("p.pppppp") + 
 				appendNewLine(".p......") + 
 				appendNewLine("........") + 
 				appendNewLine("........") + 
 				appendNewLine("........") + 
 				appendNewLine("PPPPPPPP") + 
-				appendNewLine("........"), board.showBoard());
+				appendNewLine(".N....N."), board.showBoard());
 		
 		board.move("B3", "B4");
 		assertEquals(
-				appendNewLine("........") + 
+				appendNewLine(".n....n.") + 
 				appendNewLine("p.pppppp") + 
 				appendNewLine("........") + 
 				appendNewLine(".p......") + 
 				appendNewLine("........") + 
 				appendNewLine("........") + 
 				appendNewLine("PPPPPPPP") + 
-				appendNewLine("........"), board.showBoard());
+				appendNewLine(".N....N."), board.showBoard());
 	}
 
 	@Test(expected = PickNullPieceException.class)

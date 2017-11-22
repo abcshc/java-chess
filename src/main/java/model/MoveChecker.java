@@ -16,7 +16,8 @@ public class MoveChecker {
 	}
 
 	public boolean isMoveable(String currentLocation, String moveLocation) {
-		return true;
+		String direction = getDirectionMoveLocation(currentLocation, moveLocation);
+		return rules.stream().allMatch(rule -> rule.isMove(direction));
 	}
 
 	public String getDirectionMoveLocation(String currentLocation, String moveLocation) {
