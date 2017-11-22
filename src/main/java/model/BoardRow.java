@@ -65,5 +65,5 @@ public class BoardRow {
 		}
 		inputRow.set(7, new Pawn(color));
 		return inputRow;
-	}	
+	}
 }

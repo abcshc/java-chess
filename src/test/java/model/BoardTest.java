@@ -21,7 +21,7 @@ public class BoardTest {
 
 		String blankRank = appendNewLine("........");
 		assertEquals(appendNewLine("........") + appendNewLine("pppppppp") + blankRank + blankRank + blankRank + blankRank
-				+ appendNewLine("pppppppp") + blankRank, board.showBoard());
+				+ appendNewLine("PPPPPPPP") + blankRank, board.showBoard());
 	}
 
 	private String appendNewLine(String value) {

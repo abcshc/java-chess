@@ -5,8 +5,6 @@ import static org.junit.Assert.assertEquals;
 import org.junit.Before;
 import org.junit.Test;
 
-import exception.InvalidMoveException;
-
 public class PawnMoveRuleTest {
 	private Board board;
 	
@@ -18,15 +16,6 @@ public class PawnMoveRuleTest {
 	
 	@Test
 	public void pawnMoveTest() {
-//		assertEquals(
-//		appendNewLine("........") + 
-//		appendNewLine("pppppppp") + 
-//		appendNewLine("........") + 
-//		appendNewLine("........") + 
-//		appendNewLine("........") + 
-//		appendNewLine("........") + 
-//		appendNewLine("pppppppp") + 
-//		appendNewLine("........"), board.showBoard());
 		board.move("B2", "B4");
 		assertEquals(
 		appendNewLine("........") + 
@@ -35,23 +24,14 @@ public class PawnMoveRuleTest {
 		appendNewLine(".p......") + 
 		appendNewLine("........") + 
 		appendNewLine("........") + 
-		appendNewLine("pppppppp") + 
+		appendNewLine("PPPPPPPP") + 
 		appendNewLine("........"), board.showBoard());
 	}
 	
-	@Test(expected = InvalidMoveException.class)
-	public void pawnMoveExceptionTest() {
-//		assertEquals(
-//				appendNewLine("........") + 
-//				appendNewLine("pppppppp") + 
-//				appendNewLine("........") + 
-//				appendNewLine("........") + 
-//				appendNewLine("........") + 
-//				appendNewLine("........") + 
-//				appendNewLine("pppppppp") + 
-//				appendNewLine("........"), board.showBoard());
-		board.move("B2", "C3");
-	}
+//	@Test(expected = InvalidMoveException.class)
+//	public void pawnMoveExceptionTest() {
+//		board.move("B2", "C3");
+//	}
 	
 	private String appendNewLine(String value) {
 		return value + "\n";

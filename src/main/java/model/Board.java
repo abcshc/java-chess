@@ -11,10 +11,10 @@ public class Board {
 
 	public void initialize() {
 		board.add(new BoardRow());
-		board.add(new BoardRow("front", "black"));
+		board.add(new BoardRow("front", "white"));
 		for (int i = 0; i < 4; i++)
 			board.add(new BoardRow());
-		board.add(new BoardRow("front", "white"));
+		board.add(new BoardRow("front", "black"));
 		board.add(new BoardRow());
 	}
 
@@ -34,7 +34,7 @@ public class Board {
 		Piece piece = getPieceInLocation(currentLocation);
 		if (piece == null)
 			throw new PickNullPieceException("해당 좌표에 말이 없습니다.");
-		if(!piece.isMoveable(currentLocation, newLocation))
+		if (!piece.isMoveable(currentLocation, newLocation))
 			throw new InvalidMoveException("해당 좌표로 움직일 수 없습니다.");
 		setPieceInLocation(newLocation, piece);
 		setPieceInLocation(currentLocation, null);
@@ -42,9 +42,7 @@ public class Board {
 
 	private void setPieceInLocation(String location, Piece piece) throws InvalidLocationException {
 		checkInvalidLocationException(location);
-
 		int rowIndex = Location.indexMatchRowLocation(location);
-
 		BoardRow boardRow = board.get(rowIndex);
 		boardRow.setPiece(Location.indexMatchColumnLocation(location), piece);
 		board.set(rowIndex, boardRow);

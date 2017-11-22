@@ -25,7 +25,7 @@ public class BoardMoveTest {
 				appendNewLine("........") + 
 				appendNewLine("........") + 
 				appendNewLine("........") + 
-				appendNewLine("pppppppp") + 
+				appendNewLine("PPPPPPPP") + 
 				appendNewLine("........"), board.showBoard());
 	}
 
@@ -39,7 +39,7 @@ public class BoardMoveTest {
 				appendNewLine("........") + 
 				appendNewLine("........") + 
 				appendNewLine("........") + 
-				appendNewLine("pppppppp") + 
+				appendNewLine("PPPPPPPP") + 
 				appendNewLine("........"), board.showBoard());
 		
 		board.move("B3", "B4");
@@ -50,7 +50,7 @@ public class BoardMoveTest {
 				appendNewLine(".p......") + 
 				appendNewLine("........") + 
 				appendNewLine("........") + 
-				appendNewLine("pppppppp") + 
+				appendNewLine("PPPPPPPP") + 
 				appendNewLine("........"), board.showBoard());
 	}
 
