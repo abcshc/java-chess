@@ -5,3 +5,18 @@
 /.project
 /target/
 /.gradle/
+
+# STS
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+bin/
+
+# InteliJ
+.idea
+*.iws
+*.iml
+*.ipr
